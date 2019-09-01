@@ -1,0 +1,626 @@
+@charset "UTF-8";
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: "Noto Serif KR", serif;
+  font-weight: 800;
+  font-size: 20px;
+  word-break: keep-all;
+}
+
+/* mobile 환경으로 화면크기가 줄어들더라도 배경화면이 밑으로 늘어난다. */
+/* 최소 100vh 라서 화면이 아래로 늘어난다. */
+/* 보통 row 에 같이줌 */
+.height {
+  min-height: 70vh;
+}
+
+.height-100 {
+  min-height: 100vh;
+}
+
+.height-80 {
+  min-height: 80vh;
+}
+
+/* 메인네비 */
+#main-navi{
+  margin-top: 20px;
+  border-bottom: 3px;
+  border-color: #e9e9e9;
+}
+/* 검색창 */
+.searchMenu {
+  background: #e9e9e9;
+  border-radius: 8px;
+  min-width: 400px;
+  margin-left: 30px;
+}
+/* menu간격 */
+.gap{ 
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* 박스사이징 */
+.siz{
+  box-sizing: border-box
+}
+/* 디스플레이 */
+.disp{
+  display: flex;
+   flex-direction: row;
+}
+/* 수평정렬 */
+.ali{
+  align-items: center;
+  -webkit-align-items: center;
+}
+/* 수직정렬 */
+.jtc{
+  justify-content: center;
+  -webkit-justfy-content: center;
+}
+/* 글자 가운데 정렬 */
+.txtAli{
+	text-align: center; 
+}
+
+.apoint a{
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+.apoint a:link { text-decoration: none; color: #333; }
+.apoint a:visited { text-decoration: none; color: #333; }
+.apoint a:hover { text-decoration: none; color: #f33; }
+.apoint a:active { text-decoration: none; color: #f33; }
+
+/* 검색창 콤보박스 */
+.searchForm {
+  flex-direction: row;
+  position: relative;
+  height: 40px;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex: 1 1 auto;
+  margin-right:-17px;
+}
+
+.searchImg img {
+  width: 30px;
+  position: absolute;
+  align-items: center;
+  margin-left: -10px;
+  margin-top: -15px;
+}
+
+.searchTxt #inputSearch {
+  width: 80vh;
+  margin-right: 300px;
+  border: none;
+  margin-left: 15px;
+  background-color: transparent;
+}
+
+/* 이미지 및 홈버튼 분리 선 */
+.mainHeader .right{
+  position: absolute;
+  top: 25px;
+  height: 30px;
+  width: 20px;
+  border-right: 1px solid #e9e9e9;
+  
+}
+
+.btn-default{
+  background:#333;
+  color:white;
+  border:none;
+  position:relative;
+  height:40px;
+  font-size:12px;
+  padding:0 2em;
+  cursor:pointer;
+  border-radius:8px;
+  transition:800ms ease all;
+  outline:none;
+}
+.btn-default:hover{
+  background:white;
+  color:#333;
+}
+.btn-default:before,.btn-default:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #333;
+  transition:400ms ease all;
+}
+.btn-default:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.btn-default:hover:before,.btn-default:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+
+/* 헤더부분 바닥선 */
+.mainHeader .bottom{
+  position: absolute;
+  top: 75px;
+  left:0;
+  width: 100%;
+  border-bottom: 1px solid #e9e9e9;
+  border-collapse: collapse;
+}
+
+
+/* 배경화면(로그인창 바깥) */
+.sib {
+  width: 130px;
+  height: 41px;
+  display: block;
+  cursor: pointer;
+  background-color: #efefef;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+#sin-btn:hover {
+  background: #aaaaaa;
+}
+
+/* 로그인창 좌표 */
+.sign_up_button {
+  margin-top: -25px;
+  margin-left: 30px;
+}
+
+.join-popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(72, 72, 72, 0.8);
+  padding-top: 50px;
+}
+
+/* 로그인창 */
+.join-window {
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 2px 10px;
+  width: 500px;
+  height: 550px;
+  padding: 32px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+
+.join-popup .close-button > button {
+  background-color: white;
+  border: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+#login_margin {
+  margin: 45px 0px 0px 0px;
+}
+
+.login_logo #log-logo {
+  margin-top: -106px;
+  margin-left: -77px;
+  /* margin: 5px auto; */
+  /* width: 45px; */
+  height: 200px;
+}
+
+/* 인사말 */
+.greeting {
+  text-align: center;
+  margin: 0px auto 50px;
+  width: 355px;
+  top: 1px;
+}
+
+.greeting > h5 {
+  text-align: center;
+  color: rgb(51, 51, 51);
+  font-size: 32px;
+  font-weight: 800;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -1.2px;
+}
+
+.greeting-2 > h5 {
+  margin: 0px auto 50px;
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+  margin: -15px 0px 20px;
+}
+/* 인사말 끝 */
+/* 텍스트 필드 시작 */
+.join-popup .mail {
+  position: relative;
+  margin-top: 12px;
+  margin-right: 5px;
+}
+
+.join-popup .lock {
+  position: relative;
+  margin-top: 15px;
+  margin-right: 3px;
+}
+
+.join-popup .mail > .email_input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 8px 14px;
+  height: 50px;
+  width: 400px;
+  margin-left: 20px;
+}
+
+.join-popup .mail > .mail_logo {
+  position: absolute;
+  right: 0;
+  margin: 20px 30px 20px 20px;
+}
+
+.join-popup .lock > .pw_input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 8px 14px;
+  height: 50px;
+  width: 400px;
+  margin-left: 20px;
+}
+
+.join-popup .lock > .lock_logo {
+  position: absolute;
+  right: 0;
+  margin: 20px 30px 20px 20px;
+}
+/* 텍스트 필드  */
+/* 회원가입 버튼 */
+.join-popup .joinBtn {
+  -webkit-font-smoothing: antialiased;
+  padding: 0px 18px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #ff0026;
+  width: 400px;
+  height: 40px;
+  padding: 9px;
+  color: white;
+  border-radius: 4px;
+  margin-left: 20px;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 1.25s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1.25s cubic-bezier(0.19, 1, 0.22, 1);
+  cursor: pointer;
+}
+
+.join-popup .joinBtn:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+/* 유의사항 안내문 */
+.note {
+  margin-top: 15px;
+}
+
+.note > span {
+  -webkit-font-smoothing: antialiased;
+  font-size: 11px;
+  font-weight: normal;
+  transition: opacity 0.2s linear 0s;
+  color: rgb(170, 170, 170);
+  width: 224px;
+}
+
+.note > span strong {
+  color: #333;
+}
+/* 회원가입 질문 */
+.recheck {
+  font-weight: normal;
+  font-size: 11px;
+}
+.login-move {
+  font-weight: bold;
+  text-decoration: none;
+  color: blue;
+}
+
+/* 로그인 회원가입 전환 버튼 */
+
+.sib {
+  width: 130px;
+  height: 41px;
+  display: block;
+  cursor: pointer;
+  background-color: #efefef;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+#log-btn:hover {
+  background: #b9b9b9;
+}
+/* 로그인창 좌표 */
+.login_up_button {
+  margin-top: -25px;
+  margin-left: 30px;
+}
+/* 배경화면(로그인창 바깥) */
+.login_popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(72, 72, 72, 0.8);
+  padding-top: 50px;
+}
+
+/* 로그인창 */
+.login-window {
+  width: 500px;
+  height: 550px;
+  padding: 32px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 로그인 창 닫기 */
+
+.login_popup .close-button > button {
+  background-color: white;
+  border: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.login_popup .login_logo {
+  display: block;
+  height: 45px;
+  margin: 5px auto;
+  width: 45px;
+  margin: 12px;
+}
+/* 텍스트 필드 시작 */
+.login_popup .mail {
+  position: relative;
+  margin-top: 12px;
+  margin-right: 5px;
+}
+
+.login_popup .lock {
+  position: relative;
+  /* margin-top: 15px; */
+  margin-right: 3px;
+}
+
+.login_popup .mail > .login_mail {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 8px 14px;
+  height: 50px;
+  width: 400px;
+  margin-left: 20px;
+}
+
+.login_popup .mail > .mail_logo {
+  position: absolute;
+  right: 0;
+  margin: 20px 30px 20px 20px;
+}
+
+.login_popup .lock > .login_pwd {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 8px 14px;
+  height: 50px;
+  width: 400px;
+  margin-left: 20px;
+}
+
+.login_popup .lock > .lock_logo {
+  position: absolute;
+  right: 0;
+  margin: 20px 30px 20px 20px;
+}
+
+/* 환영글귀 */
+.login_popup .open_font {
+  width: 355px;
+  color: rgb(51, 51, 51);
+  font-size: 32px;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -1.2px;
+}
+
+.login_popup .open_font h2 {
+  margin-top: 18px;
+  margin-left: 100px;
+}
+
+/* 로그인 textbox eamil, pw 입력 */
+/* red 로그인 button */
+.login_popup .redSignupButton {
+  margin-left: 20px;
+  border: 0px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 4px;
+  -webkit-font-smoothing: antialiased;
+  padding: 0px 18px;
+  font-size: 15px;
+  font-weight: bold;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+  margin-top: 10px;
+  vertical-align: middle;
+  text-align: center;
+  background-color: #ff0026;
+  color: rgb(255, 255, 255);
+  width: 400px;
+}
+.login_popup .middle-Line {
+  border-bottom: 1px solid rgb(222, 222, 222);
+  margin: 10px auto;
+  width: 110px;
+}
+/* 비밀번호 찾기 */
+.login_popup .pw_lose {
+  margin-top: 10px;
+}
+
+.login_popup .pw_lose a {
+  color: #919191;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(105, 105, 105);
+  font-size: 12px;
+}
+/* 로그인 창 끝 */
+/* 버튼 클릭시 메시지 전송창 */
+
+/* 로그인 창 끝 */
+/* 버튼 클릭시 메시지 전송창 */
+
+  /* 창 form */
+.recMail {
+  background-color: white;
+  position: absolute;
+  top: 10%;
+  right: 30px;
+  width: 25vw;
+  height: 100%;
+  padding: 20px 10px;
+}
+		/* 텍스트 '받은 편지함' */
+.recMail .msg strong {
+  padding: 16px;
+  font-size: 30px;
+	color: #333;
+}
+
+  /* 아이콘 버튼 / 새 메시지 작성 창 띄우는 폼 */
+.recMail .msg img{
+  position: absolute;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  right: 0;
+  margin-top: 0px;
+}
+
+/* 아이콘 효과 */
+.recMail .draw{
+  position: absolute;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+  right: 30px;
+  margin-top: -30px;
+  cursor:pointer;
+}
+
+.recMail .draw:hover{
+  background: #58575791;
+  border: 1px solid rgba(0, 0, 0, 0.05);	
+  color: white;
+  border-radius: 50%;
+}
+
+.recMail .text_btn {
+  height: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+  /* 텍스트 '친구들과 아이디어를 공유하세요' */
+.recMail .text_share {
+  color:#333;
+  font-size: 36px;
+  margin-top: 50%;
+}
+
+
+  /* Pin main-modal start */
+  .modal-dialog.modal-80size {
+  width: 80%;
+  height: 80%;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-content.modal-80size {
+  height: auto;
+  min-height: 80%;
+}
+
+/* .modal-content.modal-header{ */
+/* 	display: left; */
+/* 	text-align: center; */
+/* } */
+
+.modal.modal-center {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .modal.modal-center:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 80%;
+  }
+}
+
+.modal-dialog.modal-center {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+/* Pin main-modal end */

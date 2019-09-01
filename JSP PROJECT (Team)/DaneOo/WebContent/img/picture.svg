@@ -1,0 +1,5 @@
+<!-- <svg xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink" height="70" width="70" viewBox="0 0 24 24" style="display: block;"> <path d="M12 12c5.523 0 10 4.477 10 10v2H2v-2c0-5.523 4.477-10 10-10zm0-1a5.5 5.5 0 1 1 0-11 5.5 5.5 0 1 1 0 11z" fill="#8e8e8e"></path></svg -->
+
+<svg xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" aria-label="가입 등록 상태를 불러오는 중" role="img" style="fill:#8e8e8e;" ><path d="M12 12c5.523 0 10 4.477 10 10v2H2v-2c0-5.523 4.477-10 10-10zm0-1a5.5 5.5 0 1 1 0-11 5.5 5.5 0 1 1 0 11z"></path></svg>

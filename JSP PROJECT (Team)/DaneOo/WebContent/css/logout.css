@@ -1,0 +1,48 @@
+﻿
+		/* 창 form */
+.logoutForm {
+	background-color: #fefefe;
+	position: absolute;
+	top: 12%;
+	left: 75%;
+	border: 1px solid #888;
+    height: 460px;
+	width: 345px; 
+	border-radius: 8px;
+	z-index: 10;
+}
+        
+.BTNout {
+	border: none;
+	border-radius: 8px; 
+	-webkit-transition: all .15s linear;
+	transition: all .15s linear;
+	margin: 0 -4px;
+	padding: 8px 16px;
+	cursor: pointer;	
+	}
+.BTNout:hover {
+	background: rgb(189, 189, 189);
+}
+
+/* '홈피드 수정' 폼 */
+	
+.BTNSet {
+	width: 100%;
+	padding: 4px; 
+	padding-left: 4px;
+	padding-right: 4px;
+	font-size:16px; 
+	font-weight: 700;
+	color:#333333;
+}
+
+.subLine{
+	border-top:1px solid #efefef; 
+	margin:0px;
+}
+
+.logoutForm .log-out-text {
+	color:rgb(173, 173, 173);
+	font-size: 15px;
+}

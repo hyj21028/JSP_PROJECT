@@ -1,0 +1,518 @@
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-size: 20px;
+  word-break: keep-all;
+}
+
+/* 메인네비 */
+#main-navi{
+  margin-top: 20px;
+  border-bottom: 3px;
+  border-color: #e9e9e9;
+}
+/* 검색창 */
+.searchMenu {
+  background: #e9e9e9;
+  border-radius: 8px;
+  min-width: 400px;
+  margin-left: 30px;
+}
+/* menu간격 */
+.gap{ 
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* 박스사이징 */
+.siz{
+  box-sizing: border-box
+}
+/* 디스플레이 */
+.disp{
+  display: flex;
+   flex-direction: row;
+}
+/* 수평정렬 */
+.ali{
+  align-items: center;
+  -webkit-align-items: center;
+}
+/* 수직정렬 */
+.jtc{
+  justify-content: center;
+  -webkit-justfy-content: center;
+}
+/* 글자 가운데 정렬 */
+.txtAli{
+	text-align: center; 
+}
+
+.apoint a{
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+.apoint a:link { text-decoration: none; color: #333; }
+.apoint a:visited { text-decoration: none; color: #333; }
+.apoint a:hover { text-decoration: none; color: #f33; }
+.apoint a:active { text-decoration: none; color: #f33; }
+
+/* 검색창 콤보박스 */
+.searchForm {
+  flex-direction: row;
+  position: relative;
+  height: 40px;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex: 1 1 auto;
+  margin-right:-17px;
+}
+
+.searchImg img {
+  width: 30px;
+  position: absolute;
+  align-items: center;
+  margin-left: -10px;
+  margin-top: -15px;
+}
+
+.searchTxt #inputSearch {
+  width: 80vh;
+  margin-right: 300px;
+  border: none;
+  margin-left: 15px;
+  background-color: transparent;
+}
+
+/* 이미지 및 홈버튼 분리 선 */
+.mainHeader .right{
+  position: absolute;
+  top: 25px;
+  height: 30px;
+  width: 20px;
+  border-right: 1px solid #e9e9e9;
+  
+}
+/* 헤더부분 바닥선 */
+.mainHeader .bottom{
+  position: absolute;
+  top: 75px;
+  left:0;
+  width: 100%;
+  border-bottom: 1px solid #e9e9e9;
+  border-collapse: collapse;
+}
+/* 헤더 링크 */
+.nav-item .apoint{
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-default{
+  background:#333;
+  color:white;
+  border:none;
+  position:relative;
+  height:40px;
+  font-size:12px;
+  padding:0 2em;
+  cursor:pointer;
+  border-radius:8px;
+  transition:800ms ease all;
+  outline:none;
+}
+.btn-default:hover{
+  background:white;
+  color:#333;
+}
+.btn-default:before,.btn-default:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #333;
+  transition:400ms ease all;
+}
+.btn-default:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.btn-default:hover:before,.btn-default:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+/* 사이드 메뉴 설정창 */
+.side{
+  float: left;
+  height: 100%;
+  margin-top:100px;
+  width: 300px;
+  margin-left: 400px;
+  
+}
+.side .sideMenu div{
+  font-size: 18px;
+  color:gray;
+  font-weight: 700;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+.side .sideMenu img{
+  width: 20px;
+}
+
+/* 왼쪽상단 링크메뉴 */
+.side .sideMenu apoint{
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.info{
+  font-size: 14px;
+}
+/* 프로필 수정  */
+.profile .memberUpdate{
+  display:none;
+  margin-top:100px;
+  margin-left: 700px;
+}
+.profile .memberUpdate .select .info{
+  font-size: 12px;
+  margin-top: 150px;
+}
+.profile .memberUpdate .select .btn{
+   width: 60px;
+   padding-right: 10px;
+   margin-right: 10px;
+}
+/* 프로필 수정중 사진 부분 */
+.profile .memberUpdate .profphoto{
+  margin-top: 50px;
+  width: 100px;
+}
+.profile .memberUpdate .profphoto img{
+  width: 100px;
+}
+.profile .profphoto .btn{
+  margin-left: 120px;
+  margin-top: -80px;
+  width: 60px;
+}
+/* 사용자 이름  */
+.profile .memberUpdate .homp {
+  font-size: 18px;
+  color:gray;
+}
+.profile .memberUpdate .homp input{
+  margin-left:140px;
+  margin-top: -35px;
+}
+/*  회원 수정 끝 */
+/* 계정 설정 시작 */
+.userInfom .user{
+  display:none;
+  margin-top:100px;
+  margin-left: 700px;
+}
+.userInfom .user .select .info{
+  font-size: 12px;
+  margin-top: 150px;
+}
+.userInfom .user .select .btn{
+   width: 60px;
+   padding-right: 10px;
+   margin-right: 10px;
+}
+.userInfom .user .bas h3{
+  margin-top: 30px;
+  color:#333;
+  font-weight: 800px;
+}
+.userInfom .user .bas .pwdChange{
+  margin-top: 20px;
+  text-align: center;
+  height: 50px;
+  width: 200px;
+}
+.userInfom .user .checks{
+  margin-top: 20px;
+  margin-left: -200px;
+}
+
+
+/* 라디오박스 체크 */
+input[type="radio"] {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+input[type="radio"]:focus + label:before,
+input[type="radio"]:hover + label:before {
+    border-color: black;
+}
+
+input[type="radio"]:active + label:before {
+    -webkit-transition-duration: 0;
+    transition-duration: 0;
+    -webkit-filter: brightness(0.2);
+    filter: brightness(0.2);
+}
+
+input[type="radio"] + label {
+    position: relative;
+    padding: 10px;
+    padding-left: 2em;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input[type="radio"] + label:before {
+    box-sizing: content-box;
+    content: '';
+    color: #900;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    margin-top: -9px;
+    border: 2px solid grey;
+    text-align: center;
+}
+
+input[type="radio"] + label:after {
+    box-sizing: content-box;
+    content: '';
+    background-color: #900;
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    width: 10px;
+    height: 10px;
+    margin-top: -5px;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition: -webkit-transform 200ms ease-out;
+    transition: -webkit-transform 200ms ease-out;
+    transition: transform 200ms ease-out;
+    transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
+}
+
+input[type="radio"]:checked + label:before {
+  -webkit-animation: borderscale 300ms ease-in;
+  animation: borderscale 300ms ease-in;
+  background-color: white;
+}
+
+input[type="radio"]:checked + label:after {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+input[type="radio"] + label:before,
+input[type="radio"] + label:after {
+  border-radius: 50%;
+}
+.userInfom .user .userDelete{
+  margin-top: 40px;
+}
+.bottom-line{
+  margin-top: 20px;
+  border-bottom: 1px solid gray;
+  width: 800px;
+}
+/* 계정설정 끝 */
+.notice .postit{
+  display:none;
+  margin-top:100px;
+  margin-left: 700px;
+}
+.notice .postit .fromSite{
+  margin-top: 30px;
+}
+.notice .postit .fromSite .btn{
+  margin-left: 220px;
+  margin-top: -10px;
+}
+.notice .postit .toMail{
+  margin-top: 30px;
+}
+.notice .postit .toMail .btn{
+  margin-left: 300px;
+  margin-top: -10px;
+}
+
+.notice .postit .toPush{
+  margin-top: 30px;
+}
+.notice .postit .toPush .btn{
+  margin-left: 195px;
+  margin-top: -10px;
+}
+/* 알림 끝 */
+
+.personalInfo .personal{
+  display:none;
+  margin-top:100px;
+  margin-left: 700px;
+}
+
+.personalInfo .personal .searchProtect{
+  margin-top:50px;
+}
+
+.checks {
+  position: relative;
+  margin-left: 600px;
+  margin-top:-50px;
+} 
+.checks input[type="checkbox"] { 
+  /* 실제 체크박스는 화면에서 숨김 */ 
+  position: absolute; 
+  width: 1px; 
+  height: 1px; 
+  padding: 0; 
+  margin: -1px; 
+  overflow: hidden; 
+  clip:rect(0,0,0,0); 
+  border: 0 
+} 
+.checks input[type="checkbox"] + label { 
+  display: inline-block; 
+  position: relative; 
+  cursor: pointer; 
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+
+} .checks input[type="checkbox"] + label:before { 
+  /* 가짜 체크박스 */ 
+  content: ' '; 
+  display: inline-block; 
+  width: 30px; 
+  /* 체크박스의 너비를 지정 */ 
+  height: 30px; 
+  /* 체크박스의 높이를 지정 */ 
+  line-height: 21px; /* 세로정렬을 위해 높이값과 일치 */ 
+  margin: -2px 8px 0 0; 
+  text-align: center; 
+  vertical-align: middle; 
+  background: #fafafa; 
+  border: 1px solid #cacece; 
+  border-radius : 3px; 
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05); 
+} 
+.checks input[type="checkbox"] + label:active:before, 
+.checks input[type="checkbox"]:checked + label:active:before { 
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1); 
+} 
+.checks input[type="checkbox"]:checked + label:before { 
+  /* 체크박스를 체크했을때 */ 
+  content: '\2714'; /* 체크표시 유니코드 사용 */ 
+  color: #99a1a7; 
+  text-shadow: 1px 1px #fff; 
+  background: #e9ecee; 
+  border-color: #adb8c0; 
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), 
+  inset 15px 10px -12px rgba(255,255,255,0.1); 
+}
+/* 보안  */
+.scan .sec{
+  display:none;
+  margin-top:100px;
+  margin-left: 700px;
+}
+.scan .sec .contactMuchine{
+  margin-top:30px;
+}
+/* 버튼 클릭시 메시지 전송창 */
+
+  /* 창 form */
+.recMail {
+  background-color: white;
+  z-index:1;
+  position: absolute;
+  top: 10%;
+  right: 30px;
+  width: 25vw;
+  height: 100%;
+  padding: 20px 10px;
+}
+		/* 텍스트 '받은 편지함' */
+.recMail .msg strong {
+  padding: 16px;
+  font-size: 30px;
+	color: #333;
+}
+
+  /* 아이콘 버튼 / 새 메시지 작성 창 띄우는 폼 */
+.recMail .msg img{
+  position: absolute;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  right: 0;
+  margin-top: 0px;
+}
+
+/* 아이콘 효과 */
+.recMail .draw{
+  position: absolute;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+  right: 30px;
+  margin-top: -30px;
+  cursor:pointer;
+}
+
+.recMail .draw:hover{
+  background: #58575791;
+  border: 1px solid rgba(0, 0, 0, 0.05);	
+  color: white;
+  border-radius: 50%;
+}
+
+.recMail .text_btn {
+  height: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+  /* 텍스트 '친구들과 아이디어를 공유하세요' */
+.recMail .text_share {
+  color:#333;
+  font-size: 36px;
+  margin-top: 50%;
+}
+

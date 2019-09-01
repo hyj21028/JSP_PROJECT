@@ -1,0 +1,463 @@
+
+html {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    font-size: 20px;
+    word-break: keep-all;
+  }
+  
+  /* 메인네비 */
+  #main-navi{
+    margin-top: 20px;
+    border-bottom: 3px;
+    border-color: #e9e9e9;
+  }
+  /* 검색창 */
+  .searchMenu {
+    background: #e9e9e9;
+    border-radius: 8px;
+    min-width: 400px;
+    margin-left: 30px;
+  }
+  /* menu간격 */
+  .gap{ 
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  /* 박스사이징 */
+  .siz{
+    box-sizing: border-box
+  }
+  /* 디스플레이 */
+  .disp{
+    display: flex;
+    flex-direction: row;
+  }
+  /* 수평정렬 */
+  .ali{
+    align-items: center;
+    -webkit-align-items: center;
+  }
+  /* 수직정렬 */
+  .jtc{
+    justify-content: center;
+    -webkit-justfy-content: center;
+  }
+  /* 글자 가운데 정렬 */
+  .txtAli{
+      text-align: center; 
+  }
+  
+  /* sns공유 창  관련 */
+.txtSiz{
+  font-size: 13px;
+  margin-left: 10px;
+    
+}
+
+.nav-item .apoint{
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+.nav-item .apoint:link { text-decoration: none; color: #333; }
+.nav-item .apoint:visited { text-decoration: none; color: #333; }
+.nav-item .apoint:hover { text-decoration: none; color: #f33; }
+.nav-item .apoint:active { text-decoration: none; color: #f33; }
+
+  /* 검색창 콤보박스 */
+.searchForm {
+  flex-direction: row;
+  position: relative;
+  height: 40px;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex: 1 1 auto;
+  margin-right:-17px;
+}
+  
+.searchImg img {
+  width: 30px;
+  position: absolute;
+  align-items: center;
+  margin-left: -10px;
+  margin-top: -15px;
+}
+  
+.searchTxt #inputSearch {
+  width: 80vh;
+  margin-right: 300px;
+  border: none;
+  margin-left: 15px;
+  background-color: transparent;
+}
+  
+/* 이미지 및 홈버튼 분리 선 */
+.mainHeader .right{
+  position: absolute;
+  top: 25px;
+  height: 30px;
+  width: 20px;
+  border-right: 1px solid #e9e9e9;
+    
+}
+  /* 헤더부분 바닥선 */
+.mainHeader .bottom{
+  position: absolute;
+  top: 75px;
+  left:0;
+  width: 100%;
+  border-bottom: 1px solid #e9e9e9;
+  border-collapse: collapse;
+}
+  /*헤더 끝  */
+
+.btn-default{
+  background:#333;
+  color:white;
+  border:none;
+  position:relative;
+  height:40px;
+  font-size:12px;
+  padding:0 2em;
+  cursor:pointer;
+  border-radius:8px;
+  transition:800ms ease all;
+  outline:none;
+}
+.btn-default:hover{
+  background:white;
+  color:#333;
+}
+.btn-default:before,.btn-default:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #333;
+  transition:400ms ease all;
+}
+.btn-default:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.btn-default:hover:before,.btn-default:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+/* 배경화면(로그인창 바깥) */
+.sib {
+  width: 130px;
+  height: 41px;
+  display: block;
+  cursor: pointer;
+  background-color: #efefef;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+#sib:hover {
+  background: #b9b9b9;
+}
+
+/* 로그인 후 회원 정보 */
+.profile{
+    margin-top: 40px;
+    margin-bottom: 30px;
+    
+}
+.profile img{
+    width: 30px;
+    height: 30px;
+}
+.make{
+    margin-left:50px;
+    width:50px;
+}
+.profUp{
+    margin-left:50px;
+    width:50px;
+}
+.sharesns{
+    margin-left:50px;
+    width:50px;
+}
+
+.personInfo .fol{
+    text-align: left;
+    margin-left: 50px;
+    font-weight: 700;
+    color:#333;
+}
+.personInfo img{
+    text-align: left;
+    margin-left: 50px;
+    font-weight: 700;
+    color:#333;
+}
+.userPhoto img{
+    right:0;
+    margin-left: 600px;
+    margin-top: -100px;
+    width: 150px;
+}
+/* 회원 정보창 끝 */
+.selectLink > a{
+    margin-left: 50px;
+    font-size:15px;
+    font-weight: 700;
+    color:#333;
+    text-decoration: none;
+}
+.selectLink > a:link { text-decoration: none; color: #333; }
+.selectLink > a:visited { text-decoration: none; color: #333; }
+.selectLink > a:hover { text-decoration: none; color: #f33; }
+.selectLink > a:active { text-decoration: none; color: #f33; }
+  /* 관심사 섹션 */
+.favoriteInfo{
+    display: block;
+}
+
+.favoriteInfo > .wrapper {
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    grid-gap: 20px;
+    position: relative;
+    cursor: pointer;
+    flex-wrap: nowrap;
+}
+
+.favoriteInfo > .wrapper > div {
+    display: flex; 
+    position: relative;
+    flex-direction: column;
+    height: 360px;
+    width: 100%;
+    margin: 20px 20px 20px 0;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px;
+    transform: scale(1.0); /*크기 확대 설정 */
+    transition: transform .2s;
+}
+
+/* 버튼 이미지 hover 효과 */
+.favoriteInfo > .wrapper > div:hover{
+    transform: scale(1.1); /*크기 확대 1.1 크기 */
+    transition: transform .2s; /*변형 속도*/
+}
+ 
+.favoriteInfo > .wrapper > div > .picture > img{
+    max-width:  100%;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+}
+
+.favoriteInfo > .wrapper > div > .text {
+    width: 200px;
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    padding-left: 15px;
+}
+.favoriteInfo > .wrapper > div > .text > .text-1{
+    color: #484848;
+    font-weight: bold;
+    font-size: 20px; 
+}
+.favoriteInfo > .wrapper .btn{
+    margin-top: 20px;
+}
+/* 버튼 클릭시 메시지 전송창 */
+/* 공유 사이트 관련 창 */
+
+.share-popop {
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+  left: 400px;
+  top: 300px;
+  width: 450px;
+  height: 600px;
+  padding: 10px;
+
+}
+.share-window{
+  width: 450px;
+  height: 600px;
+  padding: 32px;
+  background-color: white;
+  border: 2px solid #e9e9e9;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  
+}
+/* 검색창 */
+.nameSearch {
+  background: #e9e9e9;
+  border-radius: 8px;
+  max-width:  400px;
+  margin-left: 10px;
+}
+/* 이미지그리드 */
+#grds {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+/* 검색창 콤보박스 */
+.mailSearch {
+  flex-direction: row;
+  position: relative;
+  height: 40px;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex: 1 1 auto;
+
+}
+.searchImgs img {
+  width: 30px;
+  position: absolute;
+  align-items: center;
+  margin-left:-15px;
+  margin-top: -15px;
+}
+
+.searchText #toSearch {
+  width: 250px;
+  margin-right: -25px;
+  border: none;
+  margin-left: 10px;
+  background-color: transparent;
+}
+
+.share-popop .shareTxt{
+  margin-top:20px;
+  font-weight: 700;
+  width: 30vw;
+  margin-bottom: 10px;
+}
+/* 이미지 크기 */
+.share-popop .snsImg img{
+   width: 40px;
+   margin-left: 10px;
+}
+/* 또는 다음으로 전송 */
+.share-popop .shareSend{
+  margin-top:20px;
+  font-weight: 700;
+  width: 30vw;
+  margin-bottom: 10px;
+}
+
+/* 스크롤바 */
+.share-popop .mybox {
+  border: none;
+  padding: 5px;
+  font: 15px/20px sans-serif;
+  width: 400px;
+  height: 200px;
+  overflow: scroll;
+  background-color: aliceblue
+  }
+  
+  /* Scrollbar styles */
+  ::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+  border: 1px solid yellowgreen;
+  border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+  background: yellowgreen;  
+  border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+  background: #88ba1c;  
+  }
+  /* 창 form */
+.recMail {
+  background-color: white;
+  z-index:1;
+  position: absolute;
+  top: 10%;
+  right: 30px;
+  width: 25vw;
+  height: 100%;
+  padding: 20px 10px;
+}
+		/* 텍스트 '받은 편지함' */
+.recMail .msg strong {
+  padding: 16px;
+  font-size: 30px;
+	color: #333;
+}
+
+  /* 아이콘 버튼 / 새 메시지 작성 창 띄우는 폼 */
+.recMail .msg img{
+  position: absolute;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  right: 0;
+  margin-top: 0px;
+}
+
+/* 아이콘 효과 */
+.recMail .draw{
+  position: absolute;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+  right: 30px;
+  margin-top: -30px;
+  cursor:pointer;
+}
+
+.recMail .draw:hover{
+  background: #58575791;
+  border: 1px solid rgba(0, 0, 0, 0.05);	
+  color: white;
+  border-radius: 50%;
+}
+
+.recMail .text_btn {
+  height: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+  /* 텍스트 '친구들과 아이디어를 공유하세요' */
+.recMail .text_share {
+  color:#333;
+  font-size: 36px;
+  margin-top: 50%;
+}
+

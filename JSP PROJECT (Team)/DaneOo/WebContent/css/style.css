@@ -1,0 +1,13 @@
+@charset "UTF-8";
+body {
+  font-family: "Noto Serif KR", serif;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+/* mobile 환경으로 화면크기가 줄어들더라도 배경화면이 밑으로 늘어난다. */
+/* 최소 100vh 라서 화면이 아래로 늘어난다. */
+/* 보통 row 에 같이줌 */
+.height {
+  min-height: 100vh;
+}
