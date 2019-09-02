@@ -100,11 +100,11 @@
 
  	<!-- 제품 섹션 시작 -->
     <section id="team" class="py-5 bg-light">
-      <div class="container" style="display : flex">
+      <div class="container-fluid" style="display : flex">
         <div class="row">
 		<!-- Item forEach Start -->
           <c:forEach items="${flist }" var="List" varStatus="status">
-          <div class="col-md-4 col-lg-3 col-sm-6 my-3">
+          <div class="col-md-2 col-lg-2 col-sm-2 my-3">
             <div class="card">
 <!--       <img src="https://shopping-phinf.pstatic.net/main_1164266/11642661041.20170614110340.jpg" alt="member" class="card-img-top" /> -->
 			<img src="${List.image }" alt="member" class="card-img-top"/>

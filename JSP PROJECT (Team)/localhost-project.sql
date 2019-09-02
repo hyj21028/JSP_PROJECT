@@ -58,6 +58,7 @@ hprice VARCHAR2(100) not null,
 mallname VARCHAR2(300) not null,
 productid NUMBER(30) not null,
 producttype NUMBER(2) not null,
+category NUMBER(1024) not null,
 count NUMBER default 0);
 
 drop SEQUENCE tblItem_seq;
@@ -96,7 +97,7 @@ commit;
 --		"productId": "11642661041",
 --		"productType": "1"
 
-insert into tblItem(bno, title, link, image, lprice, hprice, mallname, productid, producttype, count) 
+insert into tblItem(bno, title, link, image, lprice, hprice, mallname, productid, producttype, category ,count) 
 values(tblItem_seq.nextval, 
         '반스 올드스쿨 <b>스니커즈</b> VN000D3HY28 블랙', 
         'https://search.shopping.naver.com/gate.nhn?id=11642661041'
@@ -104,8 +105,9 @@ values(tblItem_seq.nextval,
         '20570', 
         '160000', 
         '네이버', 
-        11642661041, 
+        11642661041,
         '1',
+        '신발',
          5 );
 
 commit;        

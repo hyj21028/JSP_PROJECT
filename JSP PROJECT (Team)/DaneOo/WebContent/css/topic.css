@@ -4,9 +4,11 @@ html {
   }
   
   body {
-    height: 100%;
-    font-size: 20px;
-    word-break: keep-all;
+	height: 100%;
+	font-family: "Noto Serif KR", serif;
+	font-weight: 800;
+	font-size: 20px;
+	word-break: keep-all;
   }
   
   /* 메인네비 */
