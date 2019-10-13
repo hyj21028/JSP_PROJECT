@@ -49,9 +49,9 @@ public class ItemSearchService implements Service {
             con.setRequestProperty("X-Naver-Client-Id", clientId);
             con.setRequestProperty("X-Naver-Client-Secret", clientSecret);
             int responseCode = con.getResponseCode();
-            BufferedReader br;
+            BufferedReader br;//많은 양의 데이터를 입력받을 때, 문자, 문자 배열, 문자열 라인 등을 보다 효율적으로 처리
             if(responseCode==200) { // 정상 호출
-                br = new BufferedReader(new InputStreamReader(con.getInputStream()));
+                br = new BufferedReader(new InputStreamReader(con.getInputStream())); //콘솔에서 입력 받은 경우
             } else {  // 에러 발생
                 br = new BufferedReader(new InputStreamReader(con.getErrorStream()));
             }
@@ -72,7 +72,7 @@ public class ItemSearchService implements Service {
             /* 응답 돌려주기 */
             /* 모든 검색 다 들어감 */
             
-            obj = (JSONObject)parser.parse(new String(resp));
+            obj = (JSONObject)parser.parse(new String(resp)); //json 데이터를 넣어 json object로 만듬
 
 //            System.out.println("obj to String: "+obj.toJSONString());
             
